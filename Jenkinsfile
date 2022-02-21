@@ -1,3 +1,6 @@
+#!usr/bin/env groovy
+Library('jenkins-shared-library')_
+
 pipeline {
     agent any
 
@@ -11,6 +14,9 @@ pipeline {
         stage('build') {
             steps {
                 echo "Hello Dev! building app...."
+                script {
+                    buildApp()
+                }
             }
         }
 
@@ -22,6 +28,9 @@ pipeline {
             }
             steps {
                 echo "Deploying...."
+                script {
+                    buildDockerImage()
+                }
             }
         }
     }
