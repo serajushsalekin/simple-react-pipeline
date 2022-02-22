@@ -29,7 +29,7 @@ pipeline {
             steps {
                 echo "Deploying...."
                 script {
-                    buildDockerImage()
+                    buildDockerImage('mydockerimage')
                 }
             }
         }
