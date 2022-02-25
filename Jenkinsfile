@@ -8,6 +8,7 @@ pipeline {
         stage('test') {
             steps {
                 echo "Testing initializing..."
+                echo "Testing webhook automation..."
             }
         }
 
