@@ -5,6 +5,7 @@ pipeline {
         stage('test') {
             steps {
                 echo "Testing initializing..."
+                sh "docker --version"
             }
         }
 
